@@ -1,3 +1,14 @@
-import type { SVGProps } from "react";
-const Component = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 22" {...props}><g xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M57.855 6.6c.894-3.611-1.286-6.6-6.624-6.6H39.66l-4.335 17.663 2.516 4.345h8.231c5.394 0 9.572-2.531 10.646-6.931.541-2.256-.086-3.833-1.497-4.621V10.4A6.13 6.13 0 0 0 57.855 6.6M50.8 14.935c-.22.922-.839 1.869-3.403 1.869h-5.252l.917-3.785h5.229c2.532-.008 2.72.962 2.477 1.916zm1.05-8.217c-.188.71-.729 1.577-2.94 1.577h-4.703l.784-3.075h4.703c2.235-.016 2.344.71 2.156 1.498M65.138 13.484h10.536l1.2-5.204H66.408l.815-3.076h10.364L78.786 0H61.775l-5.394 22h19.27l1.262-5.204H64.362zM80.26 0l-1.207 5.204h6.295L81.217 22h6.608l4.14-16.796h6.741L100 0z" /><path fill="#fff" d="M6.914 22H.251l2.885-11.75.666-1.773-1.764 1.774-1.96 1.995L0 6.379 6.914 0H12.3z" /><path fill="#fff" d="m30.974 12.885-2.125-3.62L39.158 0h-9.603l-3.92 3.785-13.296 12.262L5.958 22h9.086l6.828-6.127 2.297 3.943c.784.993 1.889 2.2 6.577 2.2h5.488l-5.252-9.14zM24.898 2.57v-.047a6.04 6.04 0 0 0-2.282-1.93A6 6 0 0 0 19.693 0h-7.095l5.292 9.052z" /></g></svg>;
-export default Component;
+import { memo } from "react";
+import logo from "@/assets/icons/1xbet-logo.svg";
+
+type LogoIconProps = {
+  className?: string;
+  width?: number;
+  height?: number;
+};
+
+const LogoIcon = ({ className, width = 100, height = 22 }: LogoIconProps) => (
+  <img src={logo} alt="1xBet logo" width={width} height={height} className={className} />
+);
+
+export default memo(LogoIcon);
