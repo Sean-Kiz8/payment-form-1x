@@ -5,7 +5,7 @@ import { LanguageSelector } from "@/components/LanguageSelector";
 
 export function Header() {
   return (
-    <header className="relative w-full overflow-hidden rounded-[13px] bg-(--color-header-bg)">
+    <header className="relative w-full overflow-hidden rounded-bl-[15px] rounded-br-[15px] bg-(--color-header-bg) sm:rounded-[13px]">
       <div className="hidden h-[83px] items-center justify-between px-[32px] sm:flex">
         <LanguageSelector />
 
@@ -19,7 +19,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 px-5 py-6 sm:hidden">
+      <div className="flex flex-col gap-[26px] px-[22px] pb-[26px] pt-[22px] sm:hidden">
         <div className="flex items-center justify-between">
           <LanguageSelector variant="mobile" />
 
@@ -28,20 +28,24 @@ export function Header() {
           <button
             type="button"
             aria-label="Закрыть"
-            className="flex items-center justify-center"
+            className="flex size-[28.566px] items-center justify-center"
           >
             <CloseIcon width={24} height={24} color="#ffffff" />
           </button>
         </div>
 
         <div className="flex items-start justify-between">
-          <div className="flex flex-col gap-1">
-            <span className="text-[9.87px] font-light text-white/60">Сумма к оплате</span>
-            <span className="text-[27px] font-normal text-white">1000.00 RUB</span>
+          <div className="flex flex-col gap-[5px]">
+            <span className="text-[9.868px] font-light leading-[normal] text-white/60">
+              Сумма к оплате
+            </span>
+            <span className="text-[27px] font-normal leading-[normal] text-white">
+              1&nbsp;000,00 RUB
+            </span>
           </div>
-          <div className="flex items-center gap-[8px] rounded-[7.5px] bg-white px-[13px] py-[6px]">
-            <ClockIcon width={21.638} height={21.638} color="#14a0ff" aria-hidden />
-            <span className="text-[14.28px] font-light leading-none text-[#010000]">10:00</span>
+          <div className="flex h-[33.501px] min-w-[79.986px] items-center justify-center gap-[8px] rounded-[7.531px] bg-white px-[14px]">
+            <ClockIcon width={17.659} height={17.659} color="#14a0ff" aria-hidden />
+            <span className="text-[14.283px] font-light leading-none text-[#010000]">10:00</span>
           </div>
         </div>
       </div>

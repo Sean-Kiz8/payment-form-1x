@@ -1,19 +1,27 @@
-import { Card } from "@/components/ui/card";
-import InfoIcon from "@/components/icons/InfoIcon";
+import AlertIcon from "@/components/icons/AlertIcon";
 
 export function WarningSection() {
   return (
-    <Card className="flex-1 rounded-[9px] border-2 border-(--color-primary-blue) bg-(--color-accent-light-blue) p-5 sm:p-[35px] flex flex-col gap-[22px]">
-      <div className="flex items-center gap-[9px]">
-        <InfoIcon width={16} height={16} color="#14a0ff" />
-        <h3 className="text-warning-title">ВАЖНО!</h3>
+    <div className="flex flex-1 flex-col gap-[22px] rounded-[9px] border-2 border-(--color-primary-blue) bg-(--color-accent-light-blue) px-5 py-6 shadow-none sm:px-[35px] sm:py-[35px]">
+      <div className="flex items-center gap-[12px]">
+        <AlertIcon width={16} height={16} />
+        <h3 className="text-[17px] font-semibold leading-[normal] text-black">ВАЖНО!</h3>
       </div>
 
-      <div className="text-body flex flex-col gap-[16px]">
-        <p>Переводы средств без создания заявки (счёта) на сайте НЕ ПОДДЕРЖИВАЮТСЯ!</p>
-        <p>Переводите только через СБЕР Россия.</p>
-        <p>При оплате с другого банка<br />Вы потеряете ваши средства!</p>
+      <div className="flex flex-col gap-[14px] text-[16px] font-normal leading-[1.4] text-black">
+        <p>
+          Переводы средств без создания заявки (счёта) на сайте{' '}
+          <span className="font-semibold">НЕ ПОДДЕРЖИВАЮТСЯ!</span>
+        </p>
+        <p>
+          Переводите только через{' '}
+          <span className="font-semibold">СБЕР Россия.</span>
+        </p>
+        <div className="flex flex-col gap-[4px]">
+          <p>При оплате с другого банка</p>
+          <p className="font-semibold">Вы потеряете ваши средства!</p>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 }

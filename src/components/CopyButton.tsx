@@ -21,10 +21,10 @@ export function CopyButton({ text }: CopyButtonProps) {
   return (
     <button
       onClick={handleCopy}
-      className="flex-shrink-0 hover:opacity-70 transition-opacity"
+      className="shrink-0 transition-opacity hover:opacity-70"
       aria-label="Копировать"
     >
-      <CopyIcon width={20} height={22} color={copied ? "#14a0ff" : "#000000"} />
+      <CopyIcon width={20} height={22} color={copied ? "#14a0ff" : "rgba(0,0,0,0.5)"} />
     </button>
   );
 }
